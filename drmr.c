@@ -431,6 +431,7 @@ static void cleanup(LV2_Handle instance) {
   if (drmr->num_samples > 0)
     free_samples(drmr->samples,drmr->num_samples);
   free(drmr->gains);
+  free(drmr->request_buf);
   free(instance);
 }
 
